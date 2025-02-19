@@ -1,9 +1,10 @@
-// GetStartedScreen.js
+
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 import HomeImg from "@/assets/images/home.png";
 import { Button } from "react-native-paper";
+import packageJson from "../package.json"; 
 
 const GetStartedScreen = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const GetStartedScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={HomeImg} // Replace with your image URL or local asset
+        source={HomeImg} 
         style={styles.image}
         resizeMode="contain"
       />
@@ -26,6 +27,11 @@ const GetStartedScreen = () => {
       >
         Get Started
       </Button>
+
+      <Text style={styles.text}>
+        Version: {packageJson.version}</Text>
+      
+
     </View>
   );
 };
@@ -48,12 +54,13 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#007BFF",
     paddingVertical: 15,
-    paddingHorizontal: 40,
+    paddingHorizontal:40,
     borderRadius: 8,
   },
-  buttonText: {
-    // color: "#fff",
-    // fontSize: 18,
-    // fontWeight: "600",
+  text:{
+    fontSize: 14,
+    color: "gray",
+    marginTop: 10,
+    textAlign:'center'
   },
 });

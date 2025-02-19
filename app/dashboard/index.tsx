@@ -14,7 +14,10 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Image source={HomeImg} style={styles.image} />
+     <Text style={styles.text}>
+      Home
+     </Text>
     </View>
   );
 };
@@ -27,22 +30,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal:25
   },
   image: {
-    width: 300,
-    height: 300,
-    marginBottom: 40,
+    width: 200,
+    height: 200,
+    
   },
-  button: {
-    backgroundColor: "#007BFF",
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    borderRadius: 8,
-  },
-  buttonText: {
-    // color: "#fff",
-    // fontSize: 18,
-    // fontWeight: "600",
-  },
+  text: {
+   fontSize:30,
+   marginBottom:80
+  }
+
+
+
 });
